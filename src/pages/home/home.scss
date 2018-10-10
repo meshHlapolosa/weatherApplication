@@ -1,3 +1,45 @@
-page-home {
 
+
+.mySelectWrapper{
+    border: solid 2px black;
+    height: 400px;
 }
+
+.myInputTag{
+    margin-top: 150px;
+}
+
+.myLocationIcon{
+    width: 30px;
+    height: 40px;
+    float: right;
+    margin-top: -46px;
+    margin-right: 25px;
+}
+
+.mySelectLocationTag{
+    width: 250px;
+    margin-top: 5px;
+    border: solid 1px cadetblue;
+    border-radius: 20px;
+    opacity: 0.2;
+    height: 10px;
+}
+
+.myNdebeleHeader{
+    border: solid 0px black;
+    height: 30px;
+}
+
+.myNdebeleHeader{  
+    background-image: url('../../assets/imgs/ndebele.png');
+    opacity: 0.6;
+}
+
+.myCitySlider{
+    height: 300px;
+    margin-top: 5px;
+    
+}
+
+

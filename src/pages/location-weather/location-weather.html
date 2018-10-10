@@ -1,0 +1,50 @@
+<!--
+  Generated template for the LocationWeatherPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>locationWeather</ion-title>
+    
+        <ion-icon ios="ios-close" md="md-close" end style="float: right;" (click)="closeModal()"></ion-icon>
+      
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="myNdebeleHeader">
+      </div>
+    <img src="../../assets/imgs/flag.png" style="height: 140px; margin-left: 50px; margin-top: 20px; opacity: 0.6;"/>
+    <p class="appLabel"> ...<b style="color: red">m</b><b style="color: red">y</b><b style="color: green">W</b><b style="color: blue">e</b><b style="color: gold">a</b><b style="color: black">t</b><b style="color: red">h</b><b style="color: green">e</b><b style="color: gold">r</b><b style="color: red">A</b><b style="color: black">p</b><b style="color: blue">p</b>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+      </p>
+    
+
+    <ion-card>
+      <ion-card-header>
+       <p style="text-align: center; font-size: 20px;"> {{userCityName}} </p>
+      </ion-card-header>
+      <ion-card-content>
+        <p style="text-align: center; font-size: 80px; color: black;"> {{userTemperature}} </p>
+          <p>{{userMinimumTemperature}} </p>
+      </ion-card-content>
+    </ion-card>
+
+    <div class="myNdebeleHeader">
+    </div>
+    <div class="socialMediaTags">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+      </div>
+</ion-content>
+
+  
+
+

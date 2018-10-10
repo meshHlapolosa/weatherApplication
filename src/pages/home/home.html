@@ -1,14 +1,238 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+  
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding class="myContainer">
+ <div class="myNdebeleHeader">
+   </div>
+ <ion-list>
+    <ion-item>
+        <ion-label floating style="color: cadetblue; text-align: center;">Hello.. Where are you ?</ion-label>
+        <ion-input type="text" [(ngModel)]="city"></ion-input>
+        <button ion-button color="dark" outline>Dark Outline</button>
+      </ion-item>
+
+      <ion-item no-lines style="height: 20px;">
+          <button ion-button color="dark" outline style="margin-left: 90px;" (click)= "viewWeather()">View Weather</button>
+        </ion-item>
+   
+   <ion-slides class="myCitySlider">
+      <ion-slide>
+          
+          <ion-card>
+              <img src="../../assets/imgs/jozi.jpg" style="height: 176px; "/>
+              <ion-card-content>
+                <ion-card-title>
+                  Johannesburg
+                  </ion-card-title>
+                  <p style="font-size: 10px; margin-top: -10px;">Gauteng</p>
+                <p style="font-size: 10px;">
+                  Location point : 26.2041° S, 28.0473° E
+                </p>
+                <p style="font-size: 10px;">
+                  Minimum Temperature : {{minJozi}}
+                  </p>
+                  <p style="font-size: 10px;">
+                      Maximum Temperature : {{maxJozi}}
+                      </p>
+              </ion-card-content>
+            </ion-card>
+      
+      </ion-slide>
+    
+      <ion-slide>
+          <ion-card>
+              <img src="../../assets/imgs/pretoria.jpg" style="height: 176px; "/>
+              <ion-card-content>
+                <ion-card-title>
+                  Pretoria
+                  </ion-card-title>
+                  <p style="font-size: 10px; margin-top: -10px;">Gauteng</p>
+                  <p style="font-size: 10px;">
+                    Location point : 25.7479° S, 28.2293° E
+                  </p>
+                  <p style="font-size: 10px;">
+                      Minimum Temperature : {{minPretoria}}
+                      </p>
+                      <p style="font-size: 10px;">
+                          Maximum Temperature : {{maxPretoria}}
+                          </p>
+              </ion-card-content>
+            </ion-card>
+      </ion-slide>
+    
+      <ion-slide>
+        <ion-card>
+            <img src="../../assets/imgs/capetown.jpg" style="height: 176px;"/>
+            <ion-card-content>
+              <ion-card-title>
+                Cape Town
+                </ion-card-title>
+                <p style="font-size: 10px; margin-top: -10px;">Western Cape</p>
+                <p style="font-size: 10px;">
+                  Location point : 33.9249° S, 18.4241° E
+                </p>
+                <p style="font-size: 10px;">
+                    Minimum Temperature : {{minCapeTown}}
+                    </p>
+                    <p style="font-size: 10px;">
+                        Maximum Temperature : {{maxCapeTown}}
+                        </p>
+            </ion-card-content>
+          </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+            <img src="../../assets/imgs/durban.jpg" style="height: 176px; "/>
+            <ion-card-content>
+              <ion-card-title>
+                Durban
+                </ion-card-title>
+                <p style="font-size: 10px; margin-top: -10px;">Kwazulu Natal</p>
+                <p style="font-size: 10px;">
+                  Location point : 29.8587° S, 31.0218° E
+                </p>
+                <p style="font-size: 10px;">
+                    Minimum Temperature : {{minDurban}}
+                    </p>
+                    <p style="font-size: 10px;">
+                        Maximum Temperature : {{maxDurban}}
+                        </p>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-card>
+              <img src="../../assets/imgs/polokwane.jpg" style="height: 176px; "/>
+              <ion-card-content>
+                <ion-card-title>
+                  Polokwane
+                  </ion-card-title>
+                  <p style="font-size: 10px; margin-top: -10px;">Limpopo</p>
+                  <p style="font-size: 10px;">
+                    Location point : 23.8962° S, 29.4486° E
+                  </p>
+                  <p style="font-size: 10px;">
+                      Minimum Temperature : {{minPolokwane}}
+                      </p>
+                      <p style="font-size: 10px;">
+                          Maximum Temperature : {{maxPolokwane}}
+                          </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide >
+            <ion-card>
+                <img src="../../assets/imgs/rustenburg.jpg" style="height: 176px; "/>
+                <ion-card-content>
+                  <ion-card-title>
+                    Rustenburg
+                    </ion-card-title>
+                    <p style="font-size: 10px; margin-top: -10px;">North West</p>
+                    <p style="font-size: 10px;">
+                      Location point : 25.6544° S, 27.2559° E
+                    </p>
+                    <p style="font-size: 10px;">
+                        Minimum Temperature : {{minRustenburg}}
+                        </p>
+                        <p style="font-size: 10px;">
+                            Maximum Temperature : {{maxRustenburg}}
+                            </p>
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+
+            <ion-slide >
+              <ion-card>
+                  <img src="../../assets/imgs/bloemfontein.jpg" style="height: 176px;"/>
+                  <ion-card-content>
+                    <ion-card-title>
+                      Bloemfontein
+                      </ion-card-title>
+                      <p style="font-size: 10px; margin-top: -10px;">Free State</p>
+                      <p style="font-size: 10px;">
+                        Location point : 29.0852° S, 26.1596° E
+                      </p>
+                      <p style="font-size: 10px;">
+                          Minimum Temperature : {{minBloemfontein}}
+                          </p>
+                          <p style="font-size: 10px;">
+                              Maximum Temperature : {{maxBloemfontein}}
+                              </p>
+                  </ion-card-content>
+                </ion-card>
+              </ion-slide>
+
+              <ion-slide>
+                <ion-card>
+                    <img src="../../assets/imgs/mafikeng.jpg" style="height: 176px; "/>
+                    <ion-card-content>
+                      <ion-card-title>
+                        Mahikeng
+                        </ion-card-title>
+                        <p style="font-size: 10px; margin-top: -10px;">North West</p>
+                        <p style="font-size: 10px;">
+                          Location point : 25.8560° S, 25.6403° E
+                        </p>
+                        <p style="font-size: 10px;">
+                            Minimum Temperature : {{minMahikeng}}
+                            </p>
+                            <p style="font-size: 10px;">
+                                Maximum Temperature : {{maxMahikeng}}
+                                </p>
+                    </ion-card-content>
+                  </ion-card>
+                </ion-slide>
+
+                <ion-slide>
+                  <ion-card>
+                      <img src="../../assets/imgs/kimberly.jpg" style="height: 176px;"/>
+                      <ion-card-content>
+                        <ion-card-title>
+                          Kimberly
+                          </ion-card-title>
+                          <p style="font-size: 10px; margin-top: -10px;">Northern Cape</p>
+                          <p style="font-size: 10px;">
+                            Location point : 28.7282° S, 24.7499° E
+                          </p>
+                          <p style="font-size: 10px;">
+                              Minimum Temperature : {{minKimberly}}
+                              </p>
+                              <p style="font-size: 10px;">
+                                  Maximum Temperature : {{maxKimberly}}
+                                  </p>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-slide>
+
+                  <ion-slide >
+                    <ion-card>
+                        <img src="../../assets/imgs/nelspruit.jpg" style="height: 176px; "/>
+                        <ion-card-content>
+                          <ion-card-title>
+                            Nelspruit
+                            </ion-card-title>
+                            <p style="font-size: 10px; margin-top: -10px;">Mpumalanga</p>
+                            <p style="font-size: 10px;">
+                              Location point : 25.4753° S, 30.9694° E
+                            </p>
+                            <p style="font-size: 10px;">
+                                Minimum Temperature : {{minNelspruit}}
+                                </p>
+                                <p style="font-size: 10px;">
+                                    Maximum Temperature : {{maxNelspruit}}
+                                    </p>
+                        </ion-card-content>
+                      </ion-card>
+                    </ion-slide>
+          
+    </ion-slides>
+    <img src="../../assets/imgs/flag.png" style="height: 40px; margin-left: 130px; margin-top: 20px;"/>
+      <p style="margin-left: 100px; margin-top: -5px;"> myWeatherApp</p>
+      <div class="myNdebeleHeader" style="height: 25px;">
+        </div>
+   </ion-list>
 </ion-content>
